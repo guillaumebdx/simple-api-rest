@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository is a simple PHP API structure from [Simple MVC]")(https://github.com/WildCodeSchool/simple-mvc).
+This repository is a simple PHP API structure from [Simple MVC](https://github.com/WildCodeSchool/simple-mvc).
 
 It uses some cool vendors/libraries such as Twig and Grumphp.
 For this one, just a simple example where users can choose one of their databases and see tables in it.
