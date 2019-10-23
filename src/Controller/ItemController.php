@@ -15,17 +15,14 @@ use App\Model\ItemManager;
  * Class ItemController
  *
  */
-class ItemController extends AbstractController
+class ItemController
 {
 
 
     /**
-     * Display item listing
+     * Retrieve item listing
      *
      * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
      */
     public function all()
     {
@@ -37,13 +34,10 @@ class ItemController extends AbstractController
 
 
     /**
-     * Display item informations specified by $id
+     * Retrieve item informations specified by $id
      *
      * @param int $id
      * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
      */
     public function show(int $id)
     {
@@ -55,13 +49,10 @@ class ItemController extends AbstractController
 
 
     /**
-     * Display item edition page specified by $id
+     * Edit item by $id
      *
      * @param int $id
      * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
      */
     public function edit(int $id): string
     {
@@ -76,12 +67,9 @@ class ItemController extends AbstractController
 
 
     /**
-     * Display item creation page
+     * post new item
      *
      * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
      */
     public function add()
     {

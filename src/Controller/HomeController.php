@@ -8,16 +8,13 @@
 
 namespace App\Controller;
 
-class HomeController extends AbstractController
+class HomeController
 {
 
     /**
-     * Display home page
+     * Retrieve root endpoint
      *
      * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
      */
     public function index()
     {
