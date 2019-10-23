@@ -1,4 +1,4 @@
-# Simple MVC
+# Simple API
 
 ## Description
 
@@ -33,7 +33,6 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 ## URLs availables
 
-* Home page at [localhost:8000/](localhost:8000/)
 * Items list at [localhost:8000/item/all](localhost:8000/item/all) (To approch a restful semantic, index (in simple-mvc) has been replaced by all)
 * Item details [localhost:8000/item/index/show/:id](localhost:8000/item/show/2)
 * Item edit [localhost:8000/item/index/edit/:id](localhost:8000/item/edit/2)
