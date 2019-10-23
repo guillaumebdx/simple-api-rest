@@ -27,12 +27,12 @@ class ItemController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function all()
     {
         $itemManager = new ItemManager();
         $items = $itemManager->selectAll();
-
-        return $this->twig->render('Item/index.html.twig', ['items' => $items]);
+        
+        return json_encode($items);
     }
 
 
@@ -50,7 +50,7 @@ class ItemController extends AbstractController
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneById($id);
 
-        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
+        return json_encode($item);
     }
 
 
@@ -72,8 +72,6 @@ class ItemController extends AbstractController
             $item['title'] = $_POST['title'];
             $itemManager->update($item);
         }
-
-        return $this->twig->render('Item/edit.html.twig', ['item' => $item]);
     }
 
 
@@ -93,11 +91,8 @@ class ItemController extends AbstractController
             $item = [
                 'title' => $_POST['title'],
             ];
-            $id = $itemManager->insert($item);
-            header('Location:/item/show/' . $id);
+            $itemManager->insert($item);
         }
-
-        return $this->twig->render('Item/add.html.twig');
     }
 
 
@@ -110,6 +105,5 @@ class ItemController extends AbstractController
     {
         $itemManager = new ItemManager();
         $itemManager->delete($id);
-        header('Location:/item/index');
     }
 }
