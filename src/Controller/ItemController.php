@@ -26,10 +26,13 @@ class ItemController
      */
     public function all()
     {
-        $itemManager = new ItemManager();
-        $items = $itemManager->selectAll();
-        
-        return json_encode($items);
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $itemManager = new ItemManager();
+            $items = $itemManager->selectAll();
+
+            return json_encode($items);
+        }
+        header('HTTP/1.1 405 Method Not Allowed');
     }
 
 
@@ -41,10 +44,13 @@ class ItemController
      */
     public function show(int $id)
     {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $itemManager = new ItemManager();
+            $item = $itemManager->selectOneById($id);
 
-        return json_encode($item);
+            return json_encode($item);
+        }
+        header('HTTP/1.1 405 Method Not Allowed');
     }
 
 
@@ -70,6 +76,7 @@ class ItemController
                 header('HTTP/1.1 500 Internal Server Error');
             }
         }
+        header('HTTP/1.1 405 Method Not Allowed');
     }
 
 
@@ -96,6 +103,7 @@ class ItemController
                 header('HTTP/1.1 500 Internal Server Error');
             }
         }
+        header('HTTP/1.1 405 Method Not Allowed');
     }
 
 
@@ -116,5 +124,6 @@ class ItemController
                 header('HTTP/1.1 500 Internal Server Error');
             }
         }
+        header('HTTP/1.1 405 Method Not Allowed');
     }
 }
