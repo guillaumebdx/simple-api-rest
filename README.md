@@ -4,7 +4,7 @@
 
 This repository is a simple PHP API structure from [Simple MVC](https://github.com/WildCodeSchool/simple-mvc).
 
-It uses some cool vendors/libraries such as Twig and Grumphp.
+It uses some cool vendors/libraries such as Grumphp.
 For this one, just a simple example where users can choose one of their databases and see tables in it.
 
 ## Steps
@@ -33,10 +33,10 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 ## URLs availables
 
-* Items list at [localhost:8000/item/all](localhost:8000/item/all) (To approch a restful semantic, index (in simple-mvc) has been replaced by all)
-* Item details [localhost:8000/item/index/show/:id](localhost:8000/item/show/2)
-* Item edit [localhost:8000/item/index/edit/:id](localhost:8000/item/edit/2)
-* Item add [localhost:8000/item/index/add](localhost:8000/item/add) 
-* Item deletion [localhost:8000/item/index/delete/:id](localhost:8000/item/delete/2)
+* [GET] Items list at [localhost:8000/item/all](localhost:8000/item/all) (To approch a restful semantic, index (in simple-mvc) has been replaced by all)
+* [GET] Item details [localhost:8000/item/index/show/:id](localhost:8000/item/show/2)
+* [PUT] Item edit [localhost:8000/item/index/edit/:id](localhost:8000/item/edit/2)
+* [POST] Item add [localhost:8000/item/index/add](localhost:8000/item/add) 
+* [DELETE] Item deletion [localhost:8000/item/index/delete/:id](localhost:8000/item/delete/2)
 
 
