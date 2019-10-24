@@ -73,14 +73,16 @@ class ItemController
      */
     public function add()
     {
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $json = file_get_contents('php://input');
+            $obj = json_decode($json);
             $itemManager = new ItemManager();
             $item = [
-                'title' => $_POST['title'],
+                'title' => $obj->title,
             ];
             $itemManager->insert($item);
         }
+
     }
 
 
