@@ -33,10 +33,10 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 ## URLs availables
 
-* [GET] Items list at [localhost:8000/item/all](localhost:8000/item/all) (To approch a restful semantic, index (in simple-mvc) has been replaced by all)
-* [GET] Item details [localhost:8000/item/index/show/:id](localhost:8000/item/show/2)
-* [PUT] Item edit [localhost:8000/item/index/edit/:id](localhost:8000/item/edit/2)
-* [POST] Item add [localhost:8000/item/index/add](localhost:8000/item/add) 
-* [DELETE] Item deletion [localhost:8000/item/index/delete/:id](localhost:8000/item/delete/2)
+* [GET] - Items list at [localhost:8000/item/all](localhost:8000/item/all) (To approch a restful semantic, index (in simple-mvc) has been replaced by all)
+* [GET] - Item details [localhost:8000/item/index/show/:id](localhost:8000/item/show/2)
+* [PUT] - Item edit [localhost:8000/item/index/edit/:id](localhost:8000/item/edit/2)
+* [POST] - Item add [localhost:8000/item/index/add](localhost:8000/item/add) 
+* [DELETE] - Item deletion [localhost:8000/item/index/delete/:id](localhost:8000/item/delete/2)
 
 
