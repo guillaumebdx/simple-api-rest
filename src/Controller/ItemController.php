@@ -95,8 +95,9 @@ class ItemController
                 $item = [
                     'title' => $obj->title,
                 ];
-                $itemManager->insert($item);
+                $id = $itemManager->insert($item);
                 header('HTTP/1.1 201 Created');
+                return json_encode(['id' => $id]);
             } catch (\Exception $e) {
                 /* var_dump should be delete in production */
                 var_dump($e->getMessage());
@@ -118,6 +119,7 @@ class ItemController
             try {
                 $itemManager = new ItemManager();
                 $itemManager->delete($id);
+                header('HTTP/1.1 204 resource deleted successfully');
             } catch (\Exception $e) {
                 /* var_dump should be delete in production */
                 var_dump($e->getMessage());
