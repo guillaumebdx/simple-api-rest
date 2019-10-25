@@ -75,8 +75,9 @@ class ItemController
                 var_dump($e->getMessage());
                 header('HTTP/1.1 500 Internal Server Error');
             }
+        } else {
+            header('HTTP/1.1 405 Method Not Allowed');
         }
-        header('HTTP/1.1 405 Method Not Allowed');
     }
 
 
@@ -125,7 +126,8 @@ class ItemController
                 var_dump($e->getMessage());
                 header('HTTP/1.1 500 Internal Server Error');
             }
+        } else {
+            header('HTTP/1.1 405 Method Not Allowed');
         }
-        header('HTTP/1.1 405 Method Not Allowed');
     }
 }
